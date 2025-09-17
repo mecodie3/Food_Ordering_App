@@ -18,7 +18,7 @@ class Item(models.Model):
     description = models.TextField(max_length=2000)  # TextField for long descriptions
     price = models.DecimalField(max_digits=10, decimal_places=2)  # must include max_digits
     meal_type = models.CharField(max_length=50, choices=MEAL_TYPE)  # use choices=
-    #many to one relationship:one cook-> many items
+    #many-to-one relationship:one cook-> many items
     #all meals that the user created will be deleted
     #models.PROTECT:This prevents deletion of that User until all related Items are either deleted or reassigned
     #models.SET_NULL the user will be NULL, the items will be there;the author will be not associated
